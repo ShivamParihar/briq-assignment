@@ -56,10 +56,7 @@ function cosineSimilarity(strA, strB) {
 }
 
 function getSimilarQuote(currentQuote, allQuoteArray, history) {
-  console.log(history);
-
   const prevQuotes = history.map((quote) => quote["id"]);
-  console.log(prevQuotes);
 
   let mostSimilarQuote = {};
   let mostSimilarQuoteSimilarity = 0;
@@ -76,15 +73,11 @@ function getSimilarQuote(currentQuote, allQuoteArray, history) {
       mostSimilarQuoteSimilarity = currentSimilarity;
     }
   }
-  console.log(mostSimilarQuoteSimilarity);
   return mostSimilarQuote;
 }
 
 function getDissimilarQuote(currentQuote, allQuoteArray, history) {
-  console.log(history);
-
   const prevQuotes = history.map((quote) => quote["id"]);
-  console.log(prevQuotes);
 
   let mostDissimilarQuote = {};
   let mostDissimilarQuoteSimilarity = 1;
@@ -101,7 +94,6 @@ function getDissimilarQuote(currentQuote, allQuoteArray, history) {
       mostDissimilarQuoteSimilarity = currentSimilarity;
     }
   }
-  console.log(mostDissimilarQuoteSimilarity);
   return mostDissimilarQuote;
 }
 
